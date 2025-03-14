@@ -1,6 +1,8 @@
 import { useForm } from "react-hook-form"
 import { UserDataForm } from "../types"
 import ErrorMessage from "../components/ErrorMessage/ErrorMessage"
+import sendEmail from "../emails/email"
+import { Bounce, toast, ToastContainer } from "react-toastify"
 
 export default function Contact() {
 
@@ -13,10 +15,15 @@ export default function Contact() {
 
     const { register, handleSubmit, reset, formState: { errors } } = useForm<UserDataForm>({ defaultValues: initialValues })
 
-    const handleSend = (data: UserDataForm) => {
-        console.log("Click me")
-        console.log(data)
-        reset()
+    const handleSend = async (data: UserDataForm) => {
+        try {
+            await sendEmail(data)
+            toast("Email Sent")
+            reset()
+        } catch (error) {
+            console.error("Error enviando email", error)
+            toast("Error sending Email")
+        }
     }
 
 
@@ -134,6 +141,19 @@ export default function Contact() {
                     />
                 </div>
             </div>
+            <ToastContainer
+                position="top-right"
+                autoClose={5000}
+                hideProgressBar={false}
+                newestOnTop={false}
+                closeOnClick={false}
+                rtl={false}
+                pauseOnFocusLoss
+                draggable
+                pauseOnHover
+                theme="dark"
+                transition={Bounce}
+            />
         </div>
     )
 }
