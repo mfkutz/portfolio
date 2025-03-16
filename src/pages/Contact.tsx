@@ -3,8 +3,12 @@ import { UserDataForm } from "../types"
 import ErrorMessage from "../components/ErrorMessage/ErrorMessage"
 import sendEmail from "../emails/email"
 import { Bounce, toast, ToastContainer } from "react-toastify"
+import { useState } from "react"
+import { MoonLoader } from "react-spinners"
 
 export default function Contact() {
+
+    const [loading, setLoading] = useState(false)
 
     const initialValues: UserDataForm = {
         name: '',
@@ -16,6 +20,7 @@ export default function Contact() {
     const { register, handleSubmit, reset, formState: { errors } } = useForm<UserDataForm>({ defaultValues: initialValues })
 
     const handleSend = async (data: UserDataForm) => {
+        setLoading(true)
         try {
             await sendEmail(data)
             toast("Email Sent")
@@ -23,20 +28,35 @@ export default function Contact() {
         } catch (error) {
             console.error("Error enviando email", error)
             toast("Error sending Email")
+        } finally {
+            setLoading(false)
         }
     }
 
 
     return (
-        <div className='h-screen  text-white flex flex-col items-center '>
-            <h1 className="text-[3.5rem] font-extrabold bg-gradient-to-r from-white to bg-purple-400 bg-clip-text text-transparent mt-3">Get in touch</h1>
-            <span className="text-[1.4rem]">Reach out, and let's create a universe of possibilities together!</span>
+        <div className='h-screen  text-white flex flex-col items-center relative  '>
+            {/* <h1 className="text-[3.5rem] font-extrabold bg-gradient-to-r from-white to bg-purple-400 bg-clip-text text-transparent mt-3">Get in touch</h1>
+            <span className="text-[1.4rem]">Reach out, and let's create a universe of possibilities together!</span> */}
+
+            <div className="absolute w-[50%] h-[20%] bg-[#e02cad] rounded-full blur-[150px] top-[60%] left-[70%] transform -translate-x-[70%] -translate-y-1/2 " />
+            <div className="absolute w-[20%] h-[20%] bg-[#0550CF] rounded-full blur-[150px] top-[20%] left-[30%] transform -translate-x-[70%] -translate-y-1/2 " />
+
+            <div className="text-center text-[7rem] font-extrabold mb-0 ">
+                <h2 className="relative text-gray-600/10">
+                    Contact
+                </h2>
+                <h3 className="absolute text-indigo-500 text-[3rem] font-bold left-1/2 -translate-x-1/2 top-[8.5%]  ">
+                    Contact
+                </h3>
+            </div>
+
             <div className="bg-black/30 flex px-12 py-8 mt-7 rounded-lg backdrop-blur-sm items-center ">
                 <div className=" max-w-[450px]">
                     <div className="">
 
-                        <h2 className="text-[1.8rem] font-semibold">Let's connect constellations</h2>
-                        <p className="text-[0.9rem]">Let's align our constellations! Reach out and let the magic of collaboration illuminate our skies.</p>
+                        <h2 className="text-[1.8rem] font-semibold">Let's Connect</h2>
+                        <p className="text-[0.9rem]">Whether it's a project, a question, or just a friendly chat, I'm here. Let's connect!</p>
                         <form
                             onSubmit={handleSubmit(handleSend)}
                             noValidate
@@ -127,7 +147,16 @@ export default function Contact() {
 
                             <button
                                 className=" bg-gradient-to-r  from-indigo-600 to-purple-600 px-4 py-2  rounded-md flex w-full mt-5 justify-center items-center "
-                            >Send to the moon</button>
+
+                            >{loading ?
+
+                                <MoonLoader
+                                    color="#ffdf05"
+                                    size={18}
+                                />
+
+
+                                : "Send"}</button>
 
                         </form>
                     </div>

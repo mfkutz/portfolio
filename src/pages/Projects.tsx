@@ -12,11 +12,26 @@ export default function Projects() {
     const paginatedData = data.slice(startIndex, startIndex + itemsPerPage)
 
     return (
-        <div className='text-white flex flex-col max-w-[1100px] rounded-lg  mx-auto gruppo-regular'>
+        <div className='text-white flex flex-col max-w-[1100px] rounded-lg mx-auto relative'>
 
-            <div className=" flex flex-col w-full mt-[3rem] items-center">
-                <h1 className="text-[2rem]">Projects</h1>
-                <div className=" mt-5 flex gap-2  flex-wrap items-center justify-center " >
+            {/* <div className="absolute w-[50%] h-[50%] bg-[#34ADBE] rounded-full blur-[150px] top-[60%] left-[70%] transform -translate-x-[70%] -translate-y-1/2 " />
+            <div className="absolute w-[20%] h-[50%] bg-[#34ADBE] rounded-full blur-[150px] top-[20%] left-[10%] transform -translate-x-[70%] -translate-y-1/2 " /> */}
+
+            <div className="absolute w-[50%] h-[30%] bg-[#e02cad] rounded-full blur-[150px] top-[60%] left-[70%] transform -translate-x-[70%] -translate-y-1/2 " />
+            <div className="absolute w-[20%] h-[40%] bg-[#0550CF] rounded-full blur-[150px] top-[20%] left-[30%] transform -translate-x-[70%] -translate-y-1/2 " />
+            {/* <div className="absolute w-[20%] h-[40%] bg-[#0550CF] rounded-full blur-[150px] top-[80%] left-[30%] transform -translate-x-[70%] -translate-y-1/2 " /> */}
+
+            <div className=" flex flex-col w-full mt-[0rem] items-center">
+                <div className="text-center text-[7rem] font-extrabold mb-0 ">
+                    <h2 className="relative text-gray-600/10">
+                        Projects
+                    </h2>
+                    <h3 className="absolute text-indigo-500 text-[3rem] font-bold left-1/2 -translate-x-1/2 top-[10.5%]  ">
+                        Projects
+                    </h3>
+                </div>
+                {/* <h1 className="text-[2rem]">Projects</h1> */}
+                <div className=" mt-0 flex gap-2  flex-wrap items-center justify-center " >
 
                     {paginatedData.map(item => (
                         <CardProjects

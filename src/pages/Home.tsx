@@ -16,17 +16,19 @@ export default function Home() {
     }, []);
 
     return (
-        <div className='h-screen flex items-center justify-center flex-col relative bg-[#0b0f16] overflow-hidden'>
+        <div className='h-screen flex items-center justify-center flex-col relative bg-[#0b0f16] overflow-hidden px-4 '>
 
-            <div className="absolute w-[50%] h-[50%] bg-[#34ADBE] rounded-full blur-[150px] top-[60%] left-[70%] transform -translate-x-[70%] -translate-y-1/2"></div>
+            {/* <div className="absolute w-[50%] h-[50%] bg-[#34ADBE] rounded-full blur-[150px] top-[60%] left-[70%] transform -translate-x-[70%] -translate-y-1/2 " />
+            <div className="absolute w-[20%] h-[50%] bg-[#34ADBE] rounded-full blur-[190px] top-[20%] left-[30%] transform -translate-x-[70%] -translate-y-1/2 " /> */}
+
+
+            <div className="absolute w-[50%] h-[20%] bg-[#e02cad] rounded-full blur-[150px] top-[80%] left-[90%] transform -translate-x-[70%] -translate-y-1/2 " />
+            <div className="absolute w-[20%] h-[40%] bg-[#0550CF] rounded-full blur-[180px] top-[30%] left-[30%] transform -translate-x-[70%] -translate-y-1/2 " />
 
             <div className="max-w-[900px] bg-black/30 w-full rounded-lg backdrop-blur-sm flex p-10 gruppo-regular text-white">
-
                 <div className="absolute top-5 right-5 text-white text-sm p-2 rounded-lg ">
                     <div>{time}</div>
                 </div>
-
-
                 <div className="w-full">
                     <h1 className="text-[5rem] font-semibold leading-none">
                         Martín Kutzner
@@ -46,12 +48,10 @@ export default function Home() {
                         <img src="./Linux-Dark.svg" alt="" className="w-10" />
                         <img src="./Solidity.svg" alt="" className="w-10" />
                     </section>
-                    <div className="text-center mt-10 ">Technologies I use daily</div>
+                    <div className="text-center mt-10 text-[1.2rem] ">Technologies I use daily</div>
                 </div>
             </div>
         </div>
     )
 }
 
-
-// bg-[url("./fondo.jpg")]

@@ -3,7 +3,7 @@ import { BiHome, BiLogoGithub, BiLogoLinkedinSquare, BiCoffee, BiSolidContact, B
 
 export default function Menu() {
     return (
-        <nav className='fixed bottom-5 left-1/2 transform -translate-x-1/2  bg-black/30 backdrop-blur-md  p-3 rounded-full shadow-lg flex items-center gap-3 max-w-[500px] w-full justify-between  '>
+        <nav className='fixed bottom-5 left-1/2 transform -translate-x-1/2  bg-black/30 backdrop-blur-md  p-3 rounded-full shadow-lg flex items-center gap-3 max-w-[500px] w-full justify-between'>
             <div className='flex justify-around w-full border-r'>
 
                 <Link to='/' className='group relative p-3 bg-black/30 rounded-full transition-transform duration-300 hover:scale-110'>

@@ -1,11 +1,20 @@
 
 export default function About() {
     return (
-        <div className=' flex h-screen text-white max-w-[900px] mx-auto '>
+        <div className=' flex h-screen text-white max-w-[900px] mx-auto  relative  '>
 
-            <div className=" flex flex-col w-full ">
+            {/* <div className="absolute w-[50%] h-[50%] bg-[#34ADBE] rounded-full blur-[150px] top-[60%] left-[70%] transform -translate-x-[70%] -translate-y-1/2 " />
+            <div className="absolute w-[20%] h-[50%] bg-[#34ADBE] rounded-full blur-[150px] top-[20%] left-[10%] transform -translate-x-[70%] -translate-y-1/2 " /> */}
 
-                <div className="text-center text-[8rem] font-extrabold mb-6 ">
+            <div className="absolute w-[50%] h-[20%] bg-[#e02cad] rounded-full blur-[150px] top-[70%] left-[90%] transform -translate-x-[70%] -translate-y-1/2 " />
+            <div className="absolute w-[20%] h-[40%] bg-[#0550CF] rounded-full blur-[150px] top-[20%] left-[10%] transform -translate-x-[70%] -translate-y-1/2 " />
+
+            <div className=" flex flex-col w-full  ">
+
+
+
+
+                <div className="text-center text-[7rem] font-extrabold mb-6 ">
                     <h2 className="relative text-gray-600/10">
                         About
                     </h2>
@@ -15,21 +24,22 @@ export default function About() {
                 </div>
                 <div className="flex flex-row  ">
                     <div className="w-full bg-green-400 max-w-[300px] relative ">
-                        <div className="border w-[300px] h-[460px]  border-indigo-600 absolute left-[1rem] z-0">
+                        {/* <div className="border w-[300px] h-[460px]  border-indigo-600 absolute left-[1rem] z-0">
 
-                        </div>
+                        </div> */}
                         <img
-                            src=""
+                            src="#"
                             alt="me"
                             className="z-50"
                         />
                     </div>
 
-                    <div className=" w-full max-w-[750px]  flex flex-col p-10">
-                        <p className="text-[14px] flex">
-                            Lorem, ipsum dolor sit amet consectetur adipisicing elit. Repellat, quibusdam fuga non ullam numquam pariatur, porro debitis iste reprehenderit doloremque dicta nesciunt placeat consequatur! Quisquam earum quo delectus adipisci placeat.
-                            Lorem, ipsum dolor sit amet consectetur adipisicing elit. Repellat, quibusdam fuga non ullam numquam pariatur, porro debitis iste reprehenderit doloremque dicta nesciunt placeat consequatur! Quisquam earum quo delectus adipisci placeat.
-                            nesciunt placeat consequatur! Quisquam earum quo delectus adipisci placeat.
+                    <div className=" w-full max-w-[750px]  flex flex-col p-10 bg-black/30">
+                        <p className="text-[1rem] flex">
+                            I'm a passionate full-stack developer from Argentina with experience in JavaScript, TypeScript, React, and Node.js.
+                            I enjoy building efficient and scalable web applications, always looking for ways to improve performance
+                            and user experience. I love learning new technologies and continuously expanding my skills.
+                            Let's connect and create something great together!
                         </p>
 
 
@@ -37,30 +47,37 @@ export default function About() {
 
                             <div className="flex flex-col items-center justify-center ">
                                 <div className="flex flex-col items-center">
-                                    <label className="text-[0.75rem] font-semibold text-indigo-600">Name</label>
+                                    <label className="text-[1rem] font-semibold text-indigo-600">Name</label>
                                     <h3 className="font-semibold">Martin Federico Kutzner</h3>
                                 </div>
                                 <div className="flex flex-col items-center mt-5">
-                                    <label className="text-[0.75rem] font-semibold text-indigo-600">Country</label>
+                                    <label className="text-[1rem] font-semibold text-indigo-600">Country</label>
                                     <h3 className="font-semibold">Córdoba - Argentina</h3>
                                 </div>
+                                <div className="flex flex-col items-center mt-5">
+                                    <label className="text-[1rem] font-semibold text-indigo-600">Telegram</label>
+                                    <h3 className="font-semibold">@Mfkutz</h3>
+                                </div>
                             </div>
 
-                            <div className="flex flex-col items-center justify-center">
+                            {/* <div className="flex flex-col items-center justify-center">
                                 <div className="flex flex-col items-center">
-                                    <label className="text-[0.75rem] font-semibold text-indigo-600">Phone</label>
-                                    <h3 className="font-semibold">+54 3541 395446</h3>
+                                    <label className="text-[0.75rem] font-semibold text-indigo-600">Telegram</label>
+                                    <h3 className="font-semibold">@Mfkutz</h3>
                                 </div>
-                                <div className="flex flex-col items-center mt-5">
+                                 <div className="flex flex-col items-center mt-5">
                                     <label className="text-[0.75rem] font-semibold text-indigo-600">Email</label>
-                                    <h3 className="font-semibold">mfkutz@gmail.com</h3>
+                                    <h3 className="font-semibold">socialcode88@gmail.com</h3>
                                 </div>
-                            </div>
+                            </div> */}
                         </section>
 
-                        <section className=" flex flex-col items-center mt-6 ">
-                            <label className="text-[0.75rem] font-semibold text-indigo-600">Education</label>
-                            <p className="text-center leading-5 font-semibold max-w-[400px]">Lorem ipsum dolor sit amet consectetur adipisicing elit. Modi animi harum architecto ipsam minus hic min didjf isdjf.
+                        <section className=" flex flex-col items-center mt-5 ">
+                            <label className="text-[1rem] font-semibold text-indigo-600">Technical Training</label>
+                            <p className="text-center leading-5 font-semibold max-w-[400px] mt-1">
+                                I’ve completed intensive bootcamps and self-paced courses,
+                                focusing on full-stack development, cloud technologies, and best practices
+                                in modern web applications.
                             </p>
                         </section>
 
@@ -70,6 +87,7 @@ export default function About() {
                 </div>
 
             </div>
+
         </div>
     )
 }
