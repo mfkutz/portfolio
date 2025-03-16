@@ -20,8 +20,6 @@ export default function BasicPaginationExample() {
 
     const paginatedData = data.slice(startIndex, startIndex + itemsPerPage) ///start,end
 
-    console.log(paginatedData)
-    console.log(startIndex)
     return (
         <div className='text-white flex flex-col max-w-[1100px] rounded-lg  mx-auto gruppo-regular'>
 

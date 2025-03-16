@@ -5,10 +5,16 @@ import sendEmail from "../emails/email"
 import { Bounce, toast, ToastContainer } from "react-toastify"
 import { useState } from "react"
 import { MoonLoader } from "react-spinners"
+import { useGoogleReCaptcha } from "react-google-recaptcha-v3"
 
 export default function Contact() {
 
     const [loading, setLoading] = useState(false)
+    const { executeRecaptcha } = useGoogleReCaptcha()
+
+
+
+
 
     const initialValues: UserDataForm = {
         name: '',
@@ -21,6 +27,16 @@ export default function Contact() {
 
     const handleSend = async (data: UserDataForm) => {
         setLoading(true)
+
+
+        /* RECAPTCHAV3 */
+        if (!executeRecaptcha) {
+            console.error("ReCAPTCHA not avaible")
+            toast("Error with reCAPTCHA")
+            setLoading(false)
+            return
+        }
+
         try {
             await sendEmail(data)
             toast("Email Sent")
