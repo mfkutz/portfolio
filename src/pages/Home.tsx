@@ -1,21 +1,6 @@
 import { useEffect, useState } from "react";
-// import { useGoogleReCaptcha } from "react-google-recaptcha-v3";
 
 export default function Home() {
-
-
-    //Test reCAPTCHA
-    /*    const { executeRecaptcha } = useGoogleReCaptcha()
-       const handleVerify = async () => {
-           if (!executeRecaptcha) {
-               console.log("Recaptcha not yet available")
-               return
-           }
-   
-           const token = await executeRecaptcha("test_action")
-           console.log("Recaptcha token: ", token)
-       }
-    */
 
     const [time, setTime] = useState("");
 
@@ -45,20 +30,15 @@ export default function Home() {
                     <div>{time}</div>
                 </div>
                 <div className="w-full">
-                    <h1 className="text-[5rem] font-semibold leading-none">
+                    <h1 className=" text-[3rem] sm:text-[5rem]  font-semibold leading-none">
                         Martín Kutzner
                     </h1>
 
-                    {/*    <button
-                        className="bg-red-500 rounded-lg hidden"
-                        onClick={handleVerify}
-                    >
-                        Text ReCAPTCHA
-                    </button> */}
+
 
 
                     <span className=" text-[1.5rem] ">Fullstack developer</span>
-                    <section className=" mt-8 items-center justify-between flex flex-wrap">
+                    <section className=" mt-8 items-center gap-1 sm:justify-between sm:gap-0 flex flex-wrap">
                         <img src="./React-Dark.svg" alt="" className="w-10" />
                         <img src="./NodeJS-Dark.svg" alt="" className="w-10" />
                         <img src="./JavaScript.svg" alt="" className="w-10" />
@@ -73,8 +53,11 @@ export default function Home() {
                         <img src="./Solidity.svg" alt="" className="w-10" />
                     </section>
                     <div className="text-center mt-10 text-[1.2rem] ">Technologies I use daily</div>
+
                 </div>
             </div>
+
+
         </div>
     )
 }

@@ -9,6 +9,7 @@ export default function AppLayout() {
             <section className="min-h-screen bg-neutral-900">
                 <Outlet />
             </section>
+
             <Menu />
         </div>
     )
