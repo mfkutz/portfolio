@@ -3,21 +3,33 @@ import { UserDataForm } from "../types"
 import ErrorMessage from "../components/ErrorMessage/ErrorMessage"
 import sendEmail from "../emails/email"
 import { Bounce, toast, ToastContainer } from "react-toastify"
-import { useState } from "react"
+import { useEffect, useState } from "react"
 import { MoonLoader } from "react-spinners"
 import ReCAPTCHA from "react-google-recaptcha"
+import LoadingSpinner from "../LoadingSpinner/LoadingSpinner"
 
 const siteKey = import.meta.env.VITE_KEY1_RECAPTCHA
 
 export default function Contact() {
     const [loading, setLoading] = useState(false)
+    const [imageLoaded, setImageLoaded] = useState(false)
     const [captchaValue, setCaptchaValue] = useState<string | null>(null)
+
     const initialValues: UserDataForm = {
         name: '',
         email: '',
         phoneNumber: '',
         message: '',
     }
+
+    const imageUrl = "https://res.cloudinary.com/dzeqwngmi/image/upload/fl_preserve_transparency/v1742559621/astronaut_st7am4.jpg"
+
+    useEffect(() => {
+        const img = new Image()
+        img.src = imageUrl
+        img.onload = () => setImageLoaded(true)
+    }, [])
+
 
     const { register, handleSubmit, reset, formState: { errors } } = useForm<UserDataForm>({ defaultValues: initialValues })
 
@@ -36,12 +48,14 @@ export default function Contact() {
             reset()
             setCaptchaValue(null)
         } catch (error) {
-            console.error("Error enviando email", error)
+            console.error("Error sending Email", error)
             toast("Error sending Email")
         } finally {
             setLoading(false)
         }
     }
+
+    if (!imageLoaded) return <LoadingSpinner />
 
     return (
         <div className='h-screen  text-white flex flex-col items-center relative px-4 '>
@@ -203,7 +217,7 @@ export default function Contact() {
                 </div>
                 <div>
                     <img
-                        src="https://res.cloudinary.com/dzeqwngmi/image/upload/fl_preserve_transparency/v1742559621/astronaut_st7am4.jpg"
+                        src={imageUrl}
                         alt="astronaut"
                         className="max-w-[500px] rounded-lg hidden lg:block "
                     />
