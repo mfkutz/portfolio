@@ -8,7 +8,7 @@ import { MoonLoader } from "react-spinners"
 import ReCAPTCHA from "react-google-recaptcha"
 import LoadingSpinner from "../LoadingSpinner/LoadingSpinner"
 
-const siteKey = import.meta.env.VITE_KEY1_RECAPTCHA
+const siteKey = import.meta.env.VITE_RECAPTCHA
 
 export default function Contact() {
     const [loading, setLoading] = useState(false)
