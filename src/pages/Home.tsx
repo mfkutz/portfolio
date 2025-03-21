@@ -18,10 +18,6 @@ export default function Home() {
     return (
         <div className='h-screen flex items-center justify-center flex-col relative bg-[#0b0f16] overflow-hidden px-4 '>
 
-            {/* <div className="absolute w-[50%] h-[50%] bg-[#34ADBE] rounded-full blur-[150px] top-[60%] left-[70%] transform -translate-x-[70%] -translate-y-1/2 " />
-            <div className="absolute w-[20%] h-[50%] bg-[#34ADBE] rounded-full blur-[190px] top-[20%] left-[30%] transform -translate-x-[70%] -translate-y-1/2 " /> */}
-
-
             <div className="absolute w-[50%] h-[20%] bg-[#e02cad] rounded-full blur-[150px] top-[80%] left-[90%] transform -translate-x-[70%] -translate-y-1/2 " />
             <div className="absolute w-[20%] h-[40%] bg-[#0550CF] rounded-full blur-[180px] top-[30%] left-[30%] transform -translate-x-[70%] -translate-y-1/2 " />
 
@@ -33,9 +29,6 @@ export default function Home() {
                     <h1 className=" text-[3rem] sm:text-[5rem]  font-semibold leading-none">
                         Martín Kutzner
                     </h1>
-
-
-
 
                     <span className=" text-[1.5rem] ">Fullstack developer</span>
                     <section className=" mt-8 items-center gap-1 sm:justify-between sm:gap-0 flex flex-wrap">
@@ -56,8 +49,6 @@ export default function Home() {
 
                 </div>
             </div>
-
-
         </div>
     )
 }

@@ -14,28 +14,16 @@ export default function Projects() {
     return (
         <div className='text-white flex flex-col max-w-[1100px] rounded-lg mx-auto relative pb-3'>
 
-
             {<div className="text-center mt-[7rem] mb-4 lg:mb-0 lg:hidden">
                 <h2 className=" text-gray-600/100 text-[3rem]   ">
                     Projects
                 </h2>
             </div>}
 
-
-
-            {/* <div className="absolute w-[50%] h-[50%] bg-[#34ADBE] rounded-full blur-[150px] top-[60%] left-[70%] transform -translate-x-[70%] -translate-y-1/2 " />
-            <div className="absolute w-[20%] h-[50%] bg-[#34ADBE] rounded-full blur-[150px] top-[20%] left-[10%] transform -translate-x-[70%] -translate-y-1/2 " /> */}
-
             <div className="absolute w-[50%] h-[30%] bg-[#e02cad] rounded-full blur-[150px] top-[60%] left-[70%] transform -translate-x-[70%] -translate-y-1/2 " />
             <div className="absolute w-[20%] h-[40%] bg-[#0550CF] rounded-full blur-[150px] top-[20%] left-[30%] transform -translate-x-[70%] -translate-y-1/2 " />
-            {/* <div className="absolute w-[20%] h-[40%] bg-[#0550CF] rounded-full blur-[150px] top-[80%] left-[30%] transform -translate-x-[70%] -translate-y-1/2 " /> */}
-
-
-
 
             <div className=" flex flex-col w-full mt-[0rem] items-center ">
-
-
 
                 <div className="text-center text-[7rem] font-extrabold mb-0 hidden lg:block ">
                     <h2 className="relative text-gray-600/10">

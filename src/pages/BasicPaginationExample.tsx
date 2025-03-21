@@ -1,23 +1,15 @@
-import { useState } from "react"
+/* import { useState } from "react"
 import data from "../data/data"
 import CardProjects from "../components/CardProjects/CardProjects"
 
-
 const itemsPerPage = 2
-
-
-
 
 export default function BasicPaginationExample() {
 
     const [currentPage, setCurrentPage] = useState(1)
-
     const result = data.length / itemsPerPage
-
     const totalPages = Math.ceil(data.length / itemsPerPage)
-
     const startIndex = (currentPage - 1) * itemsPerPage
-
     const paginatedData = data.slice(startIndex, startIndex + itemsPerPage) ///start,end
 
     return (
@@ -61,3 +53,4 @@ export default function BasicPaginationExample() {
         </div>
     )
 }
+ */

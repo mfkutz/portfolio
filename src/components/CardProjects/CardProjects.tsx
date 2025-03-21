@@ -28,7 +28,6 @@ export default function CardProjects({ name, image, tecnologies, link }: CardPro
                 className="h-[230px] w-full   object-contain"
             />
             <div className="p-4 gap-2 flex flex-col">
-                {/* <h3 className="text-center ">{name}</h3> */}
                 <h3 className="">Tecnologies</h3>
                 <div className="flex gap-4">
                     {tecnologies.map((tech) => (

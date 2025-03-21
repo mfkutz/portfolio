@@ -7,16 +7,11 @@ import { useState } from "react"
 import { MoonLoader } from "react-spinners"
 import ReCAPTCHA from "react-google-recaptcha"
 
-
-
 const siteKey = import.meta.env.VITE_KEY1_RECAPTCHA
 
 export default function Contact() {
-
     const [loading, setLoading] = useState(false)
-
     const [captchaValue, setCaptchaValue] = useState<string | null>(null)
-
     const initialValues: UserDataForm = {
         name: '',
         email: '',
@@ -27,7 +22,6 @@ export default function Contact() {
     const { register, handleSubmit, reset, formState: { errors } } = useForm<UserDataForm>({ defaultValues: initialValues })
 
     const handleSend = async (data: UserDataForm) => {
-
 
         if (!captchaValue) {
             toast.error("Please complete the reCAPTCHA")
@@ -49,12 +43,8 @@ export default function Contact() {
         }
     }
 
-
     return (
         <div className='h-screen  text-white flex flex-col items-center relative px-4 '>
-            {/* <h1 className="text-[3.5rem] font-extrabold bg-gradient-to-r from-white to bg-purple-400 bg-clip-text text-transparent mt-3">Get in touch</h1>
-            <span className="text-[1.4rem]">Reach out, and let's create a universe of possibilities together!</span> */}
-
 
             {<div className="text-center mt-[7rem] mb-4 lg:mb-0 lg:hidden">
                 <h2 className=" text-gray-600/100 text-[3rem]   ">
@@ -65,8 +55,6 @@ export default function Contact() {
             <div className="absolute w-[50%] h-[20%] bg-[#e02cad] rounded-full blur-[150px] top-[60%] left-[70%] transform -translate-x-[70%] -translate-y-1/2 " />
             <div className="absolute w-[20%] h-[20%] bg-[#0550CF] rounded-full blur-[150px] top-[20%] left-[30%] transform -translate-x-[70%] -translate-y-1/2 " />
 
-
-
             <div className="text-center text-[7rem] font-extrabold mb-0 hidden lg:block ">
                 <h2 className="relative text-gray-600/10">
                     Contact
@@ -76,12 +64,12 @@ export default function Contact() {
                 </h3>
             </div>
 
-            <div className="bg-black/30 flex px-1 sm:px-12 py-8 rounded-lg backdrop-blur-sm items-center ">
-                <div className=" lg:max-w-[450px] max-w-[400px] px-3">
-                    <div className=" ">
+            <div className="bg-black/30 flex px-1 sm:px-12 py-8 rounded-lg backdrop-blur-sm items-center gap-0 lg:gap-10  ">
+                <div className=" lg:max-w-[450px] max-w-[400px] px-3 ">
+                    <div className="  ">
 
                         <h2 className="text-[1.8rem] font-semibold">Let's Connect</h2>
-                        <p className="text-[0.9rem]">Whether it's a project, a question, or just a friendly chat, I'm here. Let's connect!</p>
+                        <p className="text-[0.9rem] max-w-[380px]">Whether it's a project, a question, or just a friendly chat, I'm here. Let's connect!</p>
                         <form
                             onSubmit={handleSubmit(handleSend)}
                             noValidate
