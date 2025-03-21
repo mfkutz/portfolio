@@ -22,7 +22,7 @@ export default function About() {
                 <div className=" lg:max-w-[450px] max-w-[400px] px-3">
 
                     <p className="text-[1rem] flex">
-                        I'm a passionate full-stack developer from Argentina with experience in JavaScript, TypeScript, React, and Node.js.
+                        I'm a passionate full-stack developer with experience in JavaScript, TypeScript, React, and Node.js.
                         I enjoy building efficient and scalable web applications, always looking for ways to improve performance
                         and user experience. I love learning new technologies and continuously expanding my skills.
                         Let's connect and create something great together!
