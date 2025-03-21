@@ -203,7 +203,7 @@ export default function Contact() {
                 </div>
                 <div>
                     <img
-                        src="/astronaut.webp"
+                        src="https://res.cloudinary.com/dzeqwngmi/image/upload/fl_preserve_transparency/v1742559621/astronaut_st7am4.jpg"
                         alt="astronaut"
                         className="max-w-[500px] rounded-lg hidden lg:block "
                     />
