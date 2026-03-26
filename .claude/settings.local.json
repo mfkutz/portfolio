@@ -1,0 +1,22 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(find /home/martin/Desktop/portfolio-master -not -path */node_modules/* -type d)",
+      "Bash(npm install:*)",
+      "Bash(npm run:*)",
+      "WebFetch(domain:www.presumate.com.ar)",
+      "WebSearch",
+      "Bash(file /home/martin/Desktop/portfolio-master/public/screenshots/*.png)",
+      "Bash(node -e \"require\\(''sharp''\\)\")",
+      "Bash(npx sharp-cli:*)",
+      "Bash(python3 -c \"from PIL import Image; print\\(''pillow ok''\\)\")",
+      "Bash(for f:*)",
+      "Bash(do npx:*)",
+      "Bash(done)",
+      "Bash(ls -lh *.webp)",
+      "Bash(git fetch:*)",
+      "Bash(git branch:*)",
+      "Bash(git add:*)"
+    ]
+  }
+}
