@@ -22,10 +22,10 @@ export default function About() {
                 <div className=" lg:max-w-[450px] max-w-[400px] px-3">
 
                     <p className="text-[1rem] flex">
-                        I'm a passionate full-stack developer with experience in JavaScript, TypeScript, React, and Node.js.
-                        I enjoy building efficient and scalable web applications, always looking for ways to improve performance
-                        and user experience. I love learning new technologies and continuously expanding my skills.
-                        Let's connect and create something great together!
+                        I'm a full-stack developer currently focused on mobile development with React Native and Expo.
+                        I build cross-platform apps with real-time sync, clean architecture, and smooth user experiences.
+                        My background spans the full stack — Node.js, MongoDB, and React — which lets me own features end to end,
+                        from API design to the final screen.
                     </p>
 
                     <section className=" flex flex-row justify-around mt-6">
@@ -49,9 +49,9 @@ export default function About() {
                     <section className=" flex flex-col items-center mt-5 ">
                         <label className="text-[1rem] font-semibold text-indigo-600">Technical Training</label>
                         <p className="text-center leading-5 font-semibold max-w-[400px] mt-1">
-                            I’ve completed intensive bootcamps and self-paced courses,
-                            focusing on full-stack development, cloud technologies, and best practices
-                            in modern web applications.
+                            Self-taught through hands-on projects and structured courses,
+                            with a focus on mobile and full-stack development, cloud technologies,
+                            and modern software best practices.
                         </p>
                     </section>
 

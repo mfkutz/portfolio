@@ -1,5 +1,38 @@
 const projects = [
   {
+    id: "105",
+    name: "Dallyst",
+    description:
+      "Collaborative list app for Android — real-time sync, shared grocery lists, trip planning, and smart notifications. Free on Google Play, no ads.",
+    image: "./screenshots/dallyst.webp",
+    technologies: [
+      { name: "React Native", icon: "./React-Dark.svg" },
+      { name: "TypeScript", icon: "./TypeScript.svg" },
+      { name: "Firebase", icon: "./Firebase-Dark.svg" },
+      { name: "TailwindCSS", icon: "./TailwindCSS-Dark.svg" },
+    ],
+    links: {
+      liveDemo: "https://dallyst.com",
+    },
+  },
+  {
+    id: "104",
+    name: "ARAV Business",
+    description:
+      "Full-stack SaaS for Argentine SMBs — AFIP/ARCA electronic billing with automatic CAE, POS, real-time inventory control, and business reports.",
+    image: "./screenshots/arav.webp",
+    technologies: [
+      { name: "React", icon: "./React-Dark.svg" },
+      { name: "TypeScript", icon: "./TypeScript.svg" },
+      { name: "TailwindCSS", icon: "./TailwindCSS-Dark.svg" },
+      { name: "Node.js", icon: "./NodeJS-Dark.svg" },
+      { name: "MongoDB", icon: "./MongoDB.svg" },
+    ],
+    links: {
+      liveDemo: "https://www.arav.com.ar/",
+    },
+  },
+  {
     id: "100",
     name: "Presumate",
     description: "SaaS for tradespeople to create professional quotes in minutes, send them via WhatsApp, and get notified the moment a client views or accepts.",
